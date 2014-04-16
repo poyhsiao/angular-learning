@@ -1,0 +1,27 @@
+{
+  "name": "angular-learning",
+  "version": "0.0.1",
+  "homepage": "https://github.com/poyhsiao/angular-learning",
+  "authors": [
+    "kimhsiao <kimhsiao@nownews.com>"
+  ],
+  "description": "This is just a learning course for myself",
+  "main": "app.js",
+  "keywords": [
+    "angular",
+    "learning"
+  ],
+  "license": "BSD",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "*",
+    "angular-ui-bootstrap": "~0.10.0",
+    "socket.io-client": "~0.9.16"
+  }
+}
