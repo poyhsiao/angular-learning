@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="kimz">
+  <head>
+    <meta charset="UTF-8">
+    <title>ngShow and ngHide</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script src="/js/angula-init.js"></script>
+    <script src="js/controllers.js"></script>
+  </head>
+  <body>
+    <div class="well span12" style="margin-top: 20px;" ng-controller="friendCtrl">
+      <div role="form">
+        <div class="form-group">
+          <label>
+            Search:&nbsp;
+            <input type="text" ng-model="search">
+          </label>
+        </div>
+      </div>
+      <h5>總數：[[ nu ]]</h5>
+      <ul>
+        <li ng-repeat="friend in friends | filter:search">[[ $index + 1 ]] - [[ friend.name ]] ( [[ friend.age ]])</li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -60,3 +60,40 @@ function todoCtrlUpdate($scope) {
         item.editing = false;
     }
 }
+
+function resetHelloWorld($scope) {
+    $scope.reset = function() {
+        this.message = '';
+        this.name = '';
+    }
+
+    $scope.$watch('name', function() {
+        console.dir($scope.name);
+    });
+}
+
+function showAndHideCtrl($scope) {
+    $scope.isShow = false;
+}
+
+function friendCtrl($scope, $filter) {
+    $scope.friends = [{
+        name: '張學友',
+        age: 33
+    }, {
+        name: '陳奕迅',
+        age: 35
+    }, {
+        name: '周杰倫',
+        age: 42
+    }, {
+        name: '王力宏',
+        age: 21
+    }];
+
+    $scope.nu = $scope.friends.length;
+
+    $scope.$watch('search', function() {
+        $scope.nu = $filter('filter')($scope.friends, $scope.search).length;
+    });
+}

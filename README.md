@@ -19,4 +19,5 @@ And then you may see the information that the sever runs at localhost port 20081
 
 
 ## Reference
-[邊學AngularJS邊做Todo List (1) － Hello World](http://ithelp.ithome.com.tw/question/10095041) (all the serial of angularjs aritcles)
+- [邊學AngularJS邊做Todo List (1) － Hello World](http://ithelp.ithome.com.tw/question/10095041) (all the serial of angularjs aritcles)
+- [AngularJS 入門教學 | 男丁格爾's 脫殼玩](http://abgne.tw/category/angularjs/angularjs-getting-stared/page/6)
