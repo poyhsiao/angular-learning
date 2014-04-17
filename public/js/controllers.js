@@ -91,9 +91,34 @@ function friendCtrl($scope, $filter) {
         age: 21
     }];
 
+    $scope.editing = false;
+
     $scope.nu = $scope.friends.length;
 
     $scope.$watch('search', function() {
         $scope.nu = $filter('filter')($scope.friends, $scope.search).length;
     });
+
+    $scope.addFriend = function() {
+        if (this.nName && this.nAge) {
+            this.friends.push({
+                name: $scope.nName,
+                age: $scope.nAge
+            });
+        }
+        this.nName = '';
+        this.nAge = '';
+    };
+
+    $scope.remove = function(index) {
+        $scope.friends.splice(index, 1);
+    };
+
+    $scope.edit = function(item) {
+        item.editing = true;
+    };
+
+    $scope.set = function(item) {
+        item.editing = false;
+    };
 }
